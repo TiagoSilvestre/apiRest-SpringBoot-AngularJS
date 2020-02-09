@@ -1,16 +1,17 @@
-------> BackEnd
+Projeto desenvolvido em ambiente Windows, abaixo seguem as instruÃ§oes de instalaÃ§Ã£o e configuraÃ§Ã£o.
+
+# BackEnd
 
 No back-end foi desenvolvida uma API Rest. Neste projeto foi utilizado o Spring Boot, Maven, JPA e Swagger. No banco de dados foi utilizado o MySql.
 
-Instalação
+InstalaÃ§Ã£o
  
-- Importe o projeto `api-rest` no eclipse como um projeto Maven existente. 
+- Descompacte o arquivo zip `api-rest` da pasta backend e importe o projeto no eclipse como um projeto Maven existente. 
 
+- ConfiguraÃ§Ã£o do banco de dados MySql
 
-- Configuração do banco de dados MySql
-
-No arquivo `application.properties` eu já deixei configurado um banco de dados em um servidor que eu possuo. Se você quiser utilizar outro servidor de banco de dados, é só configurar neste arquivo. 
-Eu configurei o Spring Boot para criar as tabelas automaticamente quando subir a aplicação, porém se for necessário eu deixei o sql das tabelas na pasta do backend.
+No arquivo `application.properties` eu jÃ¡ deixei configurado um banco de dados em um servidor que eu possuo. Se vocÃª quiser utilizar outro servidor de banco de dados, Ã© sÃ³ configurar neste arquivo. 
+Eu configurei o Spring Boot para criar as tabelas automaticamente quando subir a aplicaÃ§Ã£o, porÃ©m se for necessÃ¡rio eu deixei o sql das tabelas na pasta do backend.
 
 - Subir o servidor da Api Rest
 
@@ -18,37 +19,33 @@ Em `src/main/java`, no pacote `com.testebetha.apirest` execute a classe `ApiRest
 
 - Swagger
 
-Eu utilizei o Swagger para facilitar a compreensão e visualização da api. Após o servidor estar rodando, você poderá acessar a api através da url `sua_url/swagger-ui.html`, no lugar de `sua_url` coloque a url que a api está rodando.
+Eu utilizei o Swagger para facilitar a compreensÃ£o e visualizaÃ§Ã£o da api. ApÃ³s o servidor estar rodando, vocÃª poderÃ¡ acessar a api atravÃ©s da url `sua_url/swagger-ui.html`, no lugar de `sua_url` coloque a url que a api estÃ¡ rodando.
 
+- ApÃ³s esses passos a api jÃ¡ estarÃ¡ rodando.
 
-- Após esses passos a api já estará rodando.
-
-------------------------------------------------------------------------
-
-
-------> FrontEnd
+# FrontEnd
 
 O front-end foi desenvolvido com Angularjs, Bower, Nodejs, Bootstrap, entre outros. 
 
-Instalação
+InstalaÃ§Ã£o
 
-- Baixe os arquivos do frontend para uma pasta de sua preferência.
+- Baixe os arquivos do frontend para uma pasta de sua preferÃªncia.
 
 - Configure a url base da api:
 
 No arquivo:  `js/value/configValue.js`  altere o valor de baseUrl para a url que a api esta rodando, que foi configurada no backend.
 
-- Instale as dependências do projeto
+- Instale as dependÃªncias do projeto
 
-Na pasta raiz execute o comando `bower install` para instalar as dependências, caso não tenha o bower na instalado na sua máquina, será necessário instalar.
+Na pasta raiz execute o comando `bower install` para instalar as dependÃªncias, caso nÃ£o tenha o bower na instalado na sua mÃ¡quina, serÃ¡ necessÃ¡rio instalar.
 
-- Suba o servidor para a aplicação
+- Suba o servidor para a aplicaÃ§Ã£o
 
-Vamos utilizar o servidor http-server. Na pasta raiz execute o comando `http-server -c-1`, para rodar a aplicação, caso não tenha o http-server instalado na sua máquina, será necessário instala-lo globalmente. 
+Vamos utilizar o servidor http-server. Na pasta raiz execute o comando `http-server -c-1`, para rodar a aplicaÃ§Ã£o, caso nÃ£o tenha o http-server instalado na sua mÃ¡quina, serÃ¡ necessÃ¡rio instala-lo globalmente. 
 
-- Abra a aplicação no navegador
+- Abra a aplicaÃ§Ã£o no navegador
 
-Após subir o servidor, o terminal irá informar em qual url o servidor esta rodando. Acesse esse endereço no seu navegador. 
+ApÃ³s subir o servidor, o terminal irÃ¡ informar em qual url o servidor esta rodando. Acesse esse endereÃ§o no seu navegador. 
 
 
 
