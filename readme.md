@@ -21,7 +21,7 @@ Em `src/main/java`, no pacote `com.testebetha.apirest` execute a classe `ApiRest
 
 Eu utilizei o Swagger para facilitar a compreensão e visualização da api. Após o servidor estar rodando, você poderá acessar a api através da url `sua_url/swagger-ui.html`, no lugar de `sua_url` coloque a url que a api está rodando.
 
-- Após esses passos a api já estará rodando.
+- __Após esses passos a api já estará rodando__
 
 # FrontEnd
 
