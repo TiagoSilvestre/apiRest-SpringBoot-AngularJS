@@ -1,0 +1,73 @@
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#/">Home</a></li>
+            <li class="breadcrumb-item"><a href="#/clientes">Clientes</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Cadastrar Cliente</li>
+        </ol>
+    </nav>
+
+    <div class="card novo-cliente-card">
+        <div class="card-header">
+            <h3>Cadastrar Cliente</h3>
+        </div>
+        <div class="card-body">
+            <form name="clienteForm">
+                <div class="form-group">
+                    <div class="label-text">
+                        <label for="nome">Nome</label>
+                        <small id="nameHelp" class="form-text text-muted"><i>*Campo Obrigatório.</i></small>
+                    </div>
+                    <input class="form-control" type="text" id="nome" ng-model="nome" name="nome" ng-required="true" aria-describedby="nameHelp"/>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-text">                    
+                        <label for="email">Email</label>
+                        <small id="emailHelp" class="form-text text-muted"><i>*Campo Obrigatório.</i></small>
+                    </div>
+                    <input class="form-control" type="email" ng-model="email" name="email" ng-required="true" aria-describedby="emailHelp"/>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-text">   
+                        <label for="telefone">Telefone</label>
+                        <small id="telefoneHelp" class="form-text text-muted"><i>*Campo Obrigatório.</i></small>
+                    </div>
+                    <input class="form-control" type="text"  ng-model="telefone" name="telefone" ng-required="true" aria-describedby="telefoneHelp" ui-mask="99999-9999"/>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-text">   
+                        <label for="endereco">Endereço</label>
+                        <small id="enderecoHelp" class="form-text text-muted"><i>*Campo Obrigatório.</i></small>
+                    </div>
+                    <input class="form-control" type="text" ng-model="endereco" name="endereco" id="endereco" ng-required="true" aria-describedby="enderecoHelp"/>    
+                </div>
+
+                <!-- VALIDAÇÕES -->
+
+                <div ng-show="clienteForm.nome.$invalid && clienteForm.nome.$dirty" class="alert alert-danger">
+                    Preencha o campo nome
+                </div>
+                <div ng-show="clienteForm.email.$invalid && clienteForm.email.$dirty" class="alert alert-danger">
+                    Digite um email válido
+                </div>
+
+                <div ng-show="clienteForm.telefone.$error.required && clienteForm.telefone.$dirty" class="alert alert-danger">
+                    Preencha o campo telefone
+                </div>
+
+                <div ng-show="clienteForm.telefone.$error.pattern" class="alert alert-danger">
+                    O campo telefone deve ter este formato: XXXXX-XXXX
+                </div>
+
+                <div ng-show="clienteForm.endereco.$invalid && clienteForm.endereco.$dirty" class="alert alert-danger">
+                    Preencha o campo endereço
+                </div>
+
+                <button ng-click="cadastrarCliente()" class="btn btn-primary btn-block" ng-disabled="clienteForm.$invalid">Cadastrar Cliente</button>
+            </form>
+        </div>
+    </div>
+</div>

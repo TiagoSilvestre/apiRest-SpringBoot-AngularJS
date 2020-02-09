@@ -1,0 +1,26 @@
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#/">Home</a></li>
+            <li class="breadcrumb-item"><a href="#/servicos">Serviços</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Detalhes do Serviço #{{servico.id}}</li>
+        </ol>
+    </nav>
+
+    <div ng-if="servico">
+        <h3>Ordem de Serviço #{{servico.id}}</h3>
+        <br>
+        <h5>Estágio: <span class="spanDetalhesServico">{{servico.estagio | firstLetterUpperCase}}</span></h5>
+        <h5>Tipo do Equipamento: <span class="spanDetalhesServico">{{servico.tipoEquipamento}}</span></h5>
+        <h5>Marca do Equipamento: <span class="spanDetalhesServico">{{servico.marcaEquipamento}}</span></h5>
+        <h5>Descrição do Problema: <span class="spanDetalhesServico">{{servico.descricaoProblema}}</span></h5>
+        <br>
+        <h4>Dados do Cliente</h4>
+        <br>
+        <h5>Nome: <span class="spanDetalhesServico">{{servico.cliente.nome}}</span></h5>
+        <h5>Email: <span class="spanDetalhesServico">{{servico.cliente.email}}</span></h5>
+        <h5>Telefone: <span class="spanDetalhesServico">{{servico.cliente.telefone}}</span></h5>
+        <h5>Endereco: <span class="spanDetalhesServico">{{servico.cliente.endereco}}</span></h5>
+    </div>
+</div>
+<br>

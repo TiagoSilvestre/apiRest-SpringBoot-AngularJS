@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="header-container">
+        <h3>Ordens de Serviços</h3>
+        <div><a href="#/novoServico" class="btn btn-primary btn-block">+ Cadastrar Serviço</a></div>
+    </div>
+
+    <p>Lista de Serviços Cadastrados</p>
+
+    <form class="form-inline" name="servicoFilterForm">
+        <div class="form-group mb-2">
+            <p style="margin-top: 15px;">Filtrar Serviços: </p>
+        </div>
+
+        <div class="form-group mx-sm-3 mb-2">
+            <select id="estagio" class="form-control" ng-model="estagio" name="estagio" ng-required="true" placeholder="Estagio">
+                <option value="" disabled selected>Selecione o Estágio...</option>
+                <option value="pendente">Pendentes</option>
+                <option value="finalizado">Finalizados</option>
+                <option value="todos">Buscar Todos</option>
+            </select>
+        </div>
+        
+        <button ng-click="filtrarPorEstagio()" class="btn btn-primary mb-2" ng-disabled="servicoFilterForm.$invalid">Filtrar</button>
+    </form>
+
+    <div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#Id do Serviço </th>
+                    <th scope="col">Tipo do Equipamento</th>
+                    <th scope="col">Estágio</th>
+                    <th scope="col">Cliente</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="servico in servicos | filter:criterioDeBusca">
+                    <td scope="row">{{ servico.id }}</th>
+                        <td scope="row">{{ servico.tipoEquipamento }}</td>
+                        <td scope="row">{{ servico.estagio | firstLetterUpperCase }}</td>
+                        <td scope="row">{{ servico.cliente.nome | firstLetterUpperCase }}</td>
+                        <td scope="row">
+                            <a href="#/servico/detalhes/{{servico.id}}">
+                            Ver Detalhes
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div ng-if="noData">Não existem dados cadastrados.</div>
+        <div ng-if="servicosLoading">Carregando...</div>
+    </div>
+</div>

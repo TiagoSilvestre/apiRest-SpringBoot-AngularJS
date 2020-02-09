@@ -1,0 +1,47 @@
+.home-container{
+    padding: 20px;
+}
+
+header{
+    margin-bottom: 31px;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-container div a{
+    width: 195px;
+}
+
+.nav-link:hover {
+    border-bottom: 1px solid #b7b7b7;
+}
+
+.novo-cliente-card{
+    width: 500px;
+    margin: 0 auto;
+}
+
+.label-text{
+    display: flex;
+}
+
+.label-text small{
+    margin-top: 2px;
+    margin-left: 6px;
+}
+
+.spanDetalhesServico{
+    font-weight: 300;
+}
+
+.home-style{
+    height: 335px;
+    background: #4a4afb;
+    color: white;
+    padding-top: 74px;
+    margin-bottom: 5px;
+    margin-top: -31px;
+}

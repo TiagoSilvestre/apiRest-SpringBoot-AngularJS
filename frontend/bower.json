@@ -1,0 +1,16 @@
+{
+  "name": "frontEnd-testeBetha",
+  "authors": [
+    "tiagosilvestreadm@gmail.com"
+  ],
+  "description": "Frontend do consumo de uma api de controle de ordens de serviço.",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "angular": "^1.7.9",
+    "angular-growl-v2": "^0.7.9",
+    "angular-ui-mask": "^1.8.7"
+  }
+}

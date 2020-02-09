@@ -1,0 +1,72 @@
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#/">Home</a></li>
+            <li class="breadcrumb-item"><a href="#/servicos">Serviços</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Cadastrar Serviço</li>
+        </ol>
+    </nav>
+
+    <div class="card novo-cliente-card">
+        <div class="card-header">
+            <h3>Cadastrar Serviço</h3>
+        </div>
+        <div class="card-body">
+            <form name="servicoForm">
+                <div class="row">
+                    <div class="form-group col-md-8">
+                        <div class="label-text">
+                            <label for="cliente">Cliente</label>
+                            <small class="form-text text-muted"><i>*Campo Obrigatório.</i></small>
+                        </div>
+                        <select id="cliente" class="form-control" ng-model="servico.cliente" ng-options="c.nome for c in clientes" name="cliente" ng-required="true">
+                            <option>Selecione um cliente</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <a href="#/novoCliente" class="btn btn-link btn-light" style="margin-top: 8px;">+ Cadastrar Cliente</a>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-text">
+                        <label for="tipoEquipamento">Tipo do Equipamento</label>
+                        <small class="form-text text-muted"><i>*Campo Obrigatório.</i></small>
+                    </div>
+                    <input class="form-control" type="text" ng-model="servico.tipoEquipamento" name="tipoEquipamento" ng-required="true"/>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-text">
+                        <label for="marcaEquipamento">Marca do Equipamento</label>
+                        <small class="form-text text-muted"><i>*Campo Obrigatório.</i></small>
+                    </div>
+                    <input class="form-control" type="text" ng-model="servico.marcaEquipamento" name="marcaEquipamento" ng-required="true"/>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-text">
+                        <label for="descricaoProblema">Descrição do Problema</label>
+                        <small class="form-text text-muted"><i>*Campo Obrigatório.</i></small>
+                    </div>
+                    <input class="form-control" type="text" id="nome" ng-model="servico.descricaoProblema" name="descricaoProblema" ng-required="true"/>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-text">
+                        <label for="marcaEquipamento">Estágio</label>
+                        <small class="form-text text-muted"><i>*Campo Obrigatório.</i></small>
+                    </div>
+                    <select id="estagio" class="form-control" ng-model="servico.estagio" name="estagio" ng-required="true">
+                        <option value="pendente">Pendente</option>
+                        <option value="finalizado">Finalizado</option>
+                    </select>
+                </div>            
+
+                <button ng-click="cadastrarServico()" class="btn btn-primary btn-block" ng-disabled="servicoForm.$invalid">Cadastrar Serviço</button>            
+                
+            </form>
+        </div>
+    </div>
+</div>

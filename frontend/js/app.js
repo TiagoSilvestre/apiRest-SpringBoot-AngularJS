@@ -1,0 +1,1 @@
+angular.module("testeBetha", ["ui", "ngRoute", "angular-growl", "ui.mask"]);

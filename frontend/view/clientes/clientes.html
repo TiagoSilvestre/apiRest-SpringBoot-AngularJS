@@ -1,0 +1,30 @@
+<div class="container">    
+    <div class="header-container">
+        <h3>Clientes</h3>
+        <div><a href="#/novoCliente" class="btn btn-primary btn-block">+ Cadastrar Cliente</a></div>
+    </div>
+    
+    <p>Lista de Clientes Cadastrados</p>
+    <div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">Endereço</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="cliente in clientes" class="trTableData">
+                    <td scope="row">{{ cliente.nome | firstLetterUpperCase }}</th>
+                    <td scope="row">{{ cliente.email }}</td>
+                    <td scope="row">{{ cliente.telefone }}</td>
+                    <td scope="row">{{ cliente.endereco }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div ng-if="noData">Não existem dados cadastrados.</div>
+        <span ng-if="clientesLoading">Carregando...</span>
+    </div>
+</div>

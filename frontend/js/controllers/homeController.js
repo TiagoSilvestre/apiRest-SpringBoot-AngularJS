@@ -1,0 +1,1 @@
+angular.module("testeBetha").controller("homeController", function($scope){});
